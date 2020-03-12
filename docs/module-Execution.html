@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Execution - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-Errors.BreakExecutionStepError.html">BreakExecutionStepError</a></li></ul><h3>Modules</h3><ul><li><a href="module-Backtest.html">Backtest</a><ul class='methods'><li data-type='method'><a href="module-Backtest.html#.backtest">backtest</a></li><li data-type='method'><a href="module-Backtest.html#.prepareData">prepareData</a></li></ul></li><li><a href="module-Errors.html">Errors</a></li><li><a href="module-Execution.html">Execution</a><ul class='methods'><li data-type='method'><a href="module-Execution.html#.execStrategyStep">execStrategyStep</a></li><li data-type='method'><a href="module-Execution.html#.execStrategyStepWithBreak">execStrategyStepWithBreak</a></li></ul></li><li><a href="module-F.html">F</a><ul class='methods'><li data-type='method'><a href="module-F.html#.evaluateCondition">evaluateCondition</a></li><li data-type='method'><a href="module-F.html#.f.breakIf.indicators">f.breakIf.indicators</a></li><li data-type='method'><a href="module-F.html#.f.condition.indicators">f.condition.indicators</a></li><li data-type='method'><a href="module-F.html#.f.condition.threshold">f.condition.threshold</a></li><li data-type='method'><a href="module-F.html#.f.defineIndicators">f.defineIndicators</a></li><li data-type='method'><a href="module-F.html#.f.getIndicators">f.getIndicators</a></li><li data-type='method'><a href="module-F.html#.generateFunctions">generateFunctions</a></li><li data-type='method'><a href="module-F.html#.requireIndicators">requireIndicators</a></li></ul></li><li><a href="module-Indicators.html">Indicators</a><ul class='methods'><li data-type='method'><a href="module-Indicators.html#.addCandleForIndicator">addCandleForIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.addTradeForIndicator">addTradeForIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.forEachIndicator">forEachIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.indicatorAcceptsCandles">indicatorAcceptsCandles</a></li><li data-type='method'><a href="module-Indicators.html#.indicatorAcceptsTrades">indicatorAcceptsTrades</a></li><li data-type='method'><a href="module-Indicators.html#.updateCandleForIndicator">updateCandleForIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.updateIndicators">updateIndicators</a></li><li data-type='method'><a href="module-Indicators.html#.updateTradeForIndicator">updateTradeForIndicator</a></li></ul></li><li><a href="module-State.html">State</a><ul class='methods'><li data-type='method'><a href="module-State.html#.getDefaultSymbol">getDefaultSymbol</a></li><li data-type='method'><a href="module-State.html#.getIndicators">getIndicators</a></li><li data-type='method'><a href="module-State.html#.getPositions">getPositions</a></li><li data-type='method'><a href="module-State.html#.getState">getState</a></li><li data-type='method'><a href="module-State.html#.hasIndicators">hasIndicators</a></li><li data-type='method'><a href="module-State.html#.initState">initState</a></li><li data-type='method'><a href="module-State.html#.isBacktesting">isBacktesting</a></li><li data-type='method'><a href="module-State.html#.setState">setState</a></li><li data-type='method'><a href="module-State.html#.updateState">updateState</a></li></ul></li><li><a href="module-Utility.html">Utility</a><ul class='methods'><li data-type='method'><a href="module-Utility.html#.withinLastCandle">withinLastCandle</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#STATE_KEY">STATE_KEY</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Execution</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext"><p>Functions for strategy execution</p></div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="exec_index.js.html">exec/index.js</a>, <a href="exec_index.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".execStrategyStep"><span class="type-signature">(async, static) </span>execStrategyStep<span class="signature">(strategy, f, data)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="exec_exec_strategy_step.js.html">exec/exec_strategy_step.js</a>, <a href="exec_exec_strategy_step.js.html#line25">line 25</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-Execution.html#.execStrategyStepWithBreak">module:Execution.execStrategyStepWithBreak</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Executes a strategy for a single step with a data point, catching any break
+errors to halt execution early. Handles indicator initialization.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>strategy</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Strategy">Strategy</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the functional strategy to execute</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>f</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#F">F</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>configured helpers for the strategy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>data point to update the strategy with</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>candle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Candle">Candle</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>candle data point</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>trade</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Trade">Trade</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>trade data point</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".execStrategyStepWithBreak"><span class="type-signature">(async, private, static) </span>execStrategyStepWithBreak<span class="signature">(strategy, f)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="exec_exec_strategy_step_with_break.js.html">exec/exec_strategy_step_with_break.js</a>, <a href="exec_exec_strategy_step_with_break.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Executes a strategy function while catching any break errors, allowing
+execution to be halted early.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>strategy</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the strategy to execute</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>f</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#F">F</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the helper configured for the strategy</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc usertext">
+        <p>any non-break error caught during execution is thrown</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl class="param-type">
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>completed - flag indicating if execution completed fully</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Mar 12 2020 13:52:46 GMT+0700 (Indochina Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

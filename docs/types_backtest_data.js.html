@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>types/backtest_data.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-Errors.BreakExecutionStepError.html">BreakExecutionStepError</a></li></ul><h3>Modules</h3><ul><li><a href="module-Backtest.html">Backtest</a><ul class='methods'><li data-type='method'><a href="module-Backtest.html#.backtest">backtest</a></li><li data-type='method'><a href="module-Backtest.html#.prepareData">prepareData</a></li></ul></li><li><a href="module-Errors.html">Errors</a></li><li><a href="module-Execution.html">Execution</a><ul class='methods'><li data-type='method'><a href="module-Execution.html#.execStrategyStep">execStrategyStep</a></li><li data-type='method'><a href="module-Execution.html#.execStrategyStepWithBreak">execStrategyStepWithBreak</a></li></ul></li><li><a href="module-F.html">F</a><ul class='methods'><li data-type='method'><a href="module-F.html#.evaluateCondition">evaluateCondition</a></li><li data-type='method'><a href="module-F.html#.f.breakIf.indicators">f.breakIf.indicators</a></li><li data-type='method'><a href="module-F.html#.f.condition.indicators">f.condition.indicators</a></li><li data-type='method'><a href="module-F.html#.f.condition.threshold">f.condition.threshold</a></li><li data-type='method'><a href="module-F.html#.f.defineIndicators">f.defineIndicators</a></li><li data-type='method'><a href="module-F.html#.f.getIndicators">f.getIndicators</a></li><li data-type='method'><a href="module-F.html#.generateFunctions">generateFunctions</a></li><li data-type='method'><a href="module-F.html#.requireIndicators">requireIndicators</a></li></ul></li><li><a href="module-Indicators.html">Indicators</a><ul class='methods'><li data-type='method'><a href="module-Indicators.html#.addCandleForIndicator">addCandleForIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.addTradeForIndicator">addTradeForIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.forEachIndicator">forEachIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.indicatorAcceptsCandles">indicatorAcceptsCandles</a></li><li data-type='method'><a href="module-Indicators.html#.indicatorAcceptsTrades">indicatorAcceptsTrades</a></li><li data-type='method'><a href="module-Indicators.html#.updateCandleForIndicator">updateCandleForIndicator</a></li><li data-type='method'><a href="module-Indicators.html#.updateIndicators">updateIndicators</a></li><li data-type='method'><a href="module-Indicators.html#.updateTradeForIndicator">updateTradeForIndicator</a></li></ul></li><li><a href="module-State.html">State</a><ul class='methods'><li data-type='method'><a href="module-State.html#.getDefaultSymbol">getDefaultSymbol</a></li><li data-type='method'><a href="module-State.html#.getIndicators">getIndicators</a></li><li data-type='method'><a href="module-State.html#.getPositions">getPositions</a></li><li data-type='method'><a href="module-State.html#.getState">getState</a></li><li data-type='method'><a href="module-State.html#.hasIndicators">hasIndicators</a></li><li data-type='method'><a href="module-State.html#.initState">initState</a></li><li data-type='method'><a href="module-State.html#.isBacktesting">isBacktesting</a></li><li data-type='method'><a href="module-State.html#.setState">setState</a></li><li data-type='method'><a href="module-State.html#.updateState">updateState</a></li></ul></li><li><a href="module-Utility.html">Utility</a><ul class='methods'><li data-type='method'><a href="module-Utility.html#.withinLastCandle">withinLastCandle</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#STATE_KEY">STATE_KEY</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">types/backtest_data.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict'
+
+/**
+ * A linear dataset to be used for a backtest, containing candles from
+ * potentially multiple markets. The candles are in raw-array format, and have
+ * both symbol &amp; time frame data attached.
+ *
+ * @typedef {object} BacktestData
+ * @property {number} start - earliest timestamp
+ * @property {number} end - latest timestamp
+ * @property {number} tf - candle timeframe
+ * @property {string[]} symbols - array of symbols represented in the dataset
+ * @property {Array[]} data - array of raw candle data, with appended symbols
+ */
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Mar 12 2020 13:52:46 GMT+0700 (Indochina Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>
