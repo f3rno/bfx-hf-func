@@ -6,5 +6,6 @@ module.exports = {
   ...require('./lib/exec'),
   ...require('./lib/f'),
   ...require('./lib/indicators'),
-  ...require('./lib/util')
+  ...require('./lib/util'),
+  ...require('./lib/state')
 }
